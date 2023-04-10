@@ -35,7 +35,7 @@ pip install selenium openpyxl webdriver_manager
 
 ## 使用方法
 * 将用户ID保存到名为 user_ids.txt 的文件中，每行一个。
-* 运行 Python 爬虫脚本：python bilibili_user_info_scraper.py。
+* 运行 Python 爬虫脚本：python bilibili_user_info_scraper.py（或pycharm等软件打开运行）。
 * 当提示登录时，请手动登录您的 Bilibili 账户。登录完成后，按回车键继续。
 * 爬虫将开始抓取用户信息，并将结果保存到 output.xlsx 文件中。
 * 完成后，关闭浏览器并检查 output.xlsx 文件以查看提取的数据。
