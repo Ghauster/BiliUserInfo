@@ -19,7 +19,7 @@ def get_user_data(driver, user_id):
 
     wait = WebDriverWait(driver, 3)
 
-    def get_attribute_value1(driver, text):
+    def get_attribute_value1(text):
         try:
             xpath = f"//*[contains(text(), '{text}')]/parent::div"
             element = wait.until(EC.presence_of_element_located((By.XPATH, xpath)))
@@ -42,7 +42,7 @@ def get_user_data(driver, user_id):
     likes = get_attribute_value1(driver, "获赞数")
     views = get_attribute_value1(driver, "播放数")
     videos = get_attribute_value("li.contribution-item.cur span.num", "innerText")
-    read_count = get_attribute_value1(driver, "阅读数")
+    read_count = get_attribute_value1("阅读数")
 
     return {
         'nickname': nickname,
