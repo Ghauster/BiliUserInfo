@@ -90,7 +90,7 @@ def main():
         wb.save('output.xlsx')
 
         # 添加随机延时
-        sleep_time = random.uniform(1, 2)  # 随机生成1到2秒之间的延时
+        sleep_time = random.uniform(2, 5)  # 随机生成1到2秒之间的延时
         time.sleep(sleep_time)  # 暂停执行指定的秒数
 
     # 关闭浏览器
