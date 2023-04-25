@@ -1,5 +1,5 @@
 # 将用户ID保存到名为user_ids.txt的文件中，每行一个。
-# 运行此脚本后，您将在名为output.xlsx的Excel文件中看到提取的数据。
+# 运行完成后，提取的数据将保存到output.xlsx的Excel文件中。
 import re
 from openpyxl import Workbook
 from selenium import webdriver
@@ -43,7 +43,7 @@ def get_user_data(driver, user_id):
 
     return {
         'nickname': nickname,
-        'description':description,
+        'description': description,
         'following': int(str(following).replace(",", "")),
         'fans': int(str(fans).replace(",", "")),
         'likes': int(str(likes).replace(",", "")),
