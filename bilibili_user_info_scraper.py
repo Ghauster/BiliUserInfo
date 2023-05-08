@@ -39,8 +39,8 @@ def get_user_data(driver, user_id):
     description = get_attribute_value("h4.h-sign", "title")
     following = get_attribute_value(".n-data.n-gz", "title")
     fans = get_attribute_value(".n-data.n-fs", "title")
-    likes = get_attribute_value1(driver, "获赞数")
-    views = get_attribute_value1(driver, "播放数")
+    likes = get_attribute_value1("获赞数")
+    views = get_attribute_value1("播放数")
     videos = get_attribute_value("li.contribution-item.cur span.num", "innerText")
     read_count = get_attribute_value1("阅读数")
 
@@ -90,13 +90,13 @@ def main():
         wb.save('output.xlsx')
 
         # 添加随机延时
-        sleep_time = random.uniform(2, 5)  # 随机生成1到2秒之间的延时
+        sleep_time = random.uniform(5, 10)  # 随机生成5到10秒之间的延时
         time.sleep(sleep_time)  # 暂停执行指定的秒数
 
     # 关闭浏览器
     driver.quit()
 
-    print(str("输出结果中-1代表缺省，如果表格里看到了-1，即为该单元格的值没爬成功，这可能由于访问过于频繁造成"))
+    print("输出结果中-1代表缺省，如果表格里看到了-1，即为该单元格的值没爬成功，这可能由于访问过于频繁造成")
 
 if __name__ == '__main__':
     main()
